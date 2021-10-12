@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\pharmacy\", ".", "{4905BB7D-DBE7-45FB-9AEB-B26C3F96842C}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/pharmacy"
+		Debug.AspNetCompiler.PhysicalPath = "..\pharmacy\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\pharmacy\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/pharmacy"
+		Release.AspNetCompiler.PhysicalPath = "..\pharmacy\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\pharmacy\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1336"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "http://localhost/MedicinesRecipes/", "http://localhost/MedicinesRecipes", "{F6A04DD7-D8BB-4253-AAD3-8A628EC47017}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/MedicinesRecipes"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\inetpub\wwwroot\MedicinesRecipes\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\MedicinesRecipes\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/MedicinesRecipes"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\inetpub\wwwroot\MedicinesRecipes\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\MedicinesRecipes\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\..\..\..\..\inetpub\wwwroot\MedicinesRecipes\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4905BB7D-DBE7-45FB-9AEB-B26C3F96842C}.Debug|.NET.ActiveCfg = Debug|.NET
+		{4905BB7D-DBE7-45FB-9AEB-B26C3F96842C}.Debug|.NET.Build.0 = Debug|.NET
+		{F6A04DD7-D8BB-4253-AAD3-8A628EC47017}.Debug|.NET.ActiveCfg = Debug|.NET
+		{F6A04DD7-D8BB-4253-AAD3-8A628EC47017}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

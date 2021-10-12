@@ -1,0 +1,196 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MedicinesMP.master.cs" Inherits="MedicinesMP" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Or Galili</title>
+    <script language="javascript">
+        function ChangeStyleOver(obj) {
+            obj.style.background = '999900'
+            obj.style.color = 'white';
+        }
+        function ChangeStyleOut(obj) {
+            obj.style.background = '99cc33';
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway:900');
+
+        #wrapper {
+            background: url(../Images/Design/pharmacy.jpg);
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            position: absolute;
+            top: 75%;
+            left: 42%;
+            transform: translate(-50%, -50%);
+        }
+
+        .transparent-text {
+            background-color: #fff;
+            color: #000;
+            /* the magic property */
+            mix-blend-mode: screen;
+            width: 700px;
+        }
+
+        .Info {
+            background-color: #ffcc00;
+        }
+
+        A:hover {
+            color: #000000;
+        }
+
+        A {
+            color: White;
+            background-color: #99cc33;
+            text-decoration: none
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table cellspacing="0" style="width: 100%">
+            <tr>
+                <td colspan="5" style="height: 15px; background-color: white; text-align: center">
+                    <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl="~/Images/Design/PharmacyLogo.gif" Width="897px" /></td>
+            </tr>
+            <tr>
+                <td colspan="5" style="height: 16px; background-color: #669900"></td>
+            </tr>
+        </table>
+        <table height="20" width="100%" style="background-color: #99cc33">
+            <tr>
+                <td style="width: 150px; height: 18px; text-align: right" valign="top"></td>
+                <td style="width: 100px; height: 18px; text-align: right" valign="top">
+                    <asp:HyperLink ID="HyperLinkShopingBasket" runat="server" NavigateUrl="~/Shopping Basket/ShoppingBasket.aspx"
+                        Visible="False">my shopping cart</asp:HyperLink></td>
+                <td style="width: 23px; text-align: right; height: 18px;" valign="top">
+                    <asp:Image ID="Image6" runat="server" Height="17px" ImageUrl="~/Images/Design/dents_vertb_blue[1].gif" Width="15px" Visible="False" /></td>
+                <td style="width: 100px; text-align: right; height: 18px;" valign="top">
+                    <asp:LinkButton ID="LinkButtonLogOut" runat="server" OnClick="LinkButtonLogOut_Click"
+                        Visible="False">sign out</asp:LinkButton></td>
+                <td style="text-align: right; width: 23px; height: 18px;" valign="top">
+                    <asp:Image ID="Image5" runat="server" Height="17px" ImageUrl="~/Images/Design/dents_vertb_blue[1].gif" Width="15px" Visible="False" /></td>
+                <td valign="top" style="text-align: right; width: 100px; height: 18px;">
+                    <asp:HyperLink ID="HyperLinkSignUp" runat="server" NavigateUrl="~/Shopping Basket/SignUp.aspx">sign up</asp:HyperLink></td>
+                <td style="width: 23px; text-align: right; height: 18px;" valign="top">
+                    <asp:Image ID="Image4" runat="server" Height="17px" ImageUrl="~/Images/Design/dents_vertb_blue[1].gif" Width="15px" /></td>
+                <td style="width: 100px; text-align: right; height: 18px;" valign="top">
+                    <asp:LinkButton ID="LinkButtonCostumers" runat="server" OnClick="LinkButtonLogin_Click">customers</asp:LinkButton>&nbsp;</td>
+                <td style="width: 23px; text-align: right; height: 18px;" valign="top">
+                    <asp:Image ID="Image3" runat="server" Height="17px" ImageUrl="~/Images/Design/dents_vertb_blue[1].gif"
+                        Width="15px" /></td>
+                <td style="text-align: right; width: 100px; height: 18px;" valign="top" width="100">&nbsp;<asp:HyperLink ID="HyperLinkAdminstartion" runat="server" NavigateUrl="~/Catalogue Administration/Access.aspx">administration</asp:HyperLink></td>
+                <td style="width: 23px; text-align: right; height: 18px;" valign="top">
+                    <asp:Image ID="Image2" runat="server" Height="17px" ImageUrl="~/Images/Design/dents_vertb_blue[1].gif" Width="15px" /></td>
+                <td style="text-align: right; width: 100px; height: 18px;" valign="top" width="100">&nbsp;<asp:LinkButton ID="LinkButtonHomePage" runat="server" OnClick="LinkButtonHomePage_Click">home page</asp:LinkButton></td>
+            </tr>
+        </table>
+
+        <table style="width: 100%" cellspacing="0">
+            <tr>
+                <td style="width: 850px; text-align: center;" bgcolor="#66cccc">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    &nbsp;&nbsp;&nbsp;
+                </td>
+                <td style="width: 50px; background-color: #ffcc33;" valign="top" align="center">
+                    <table align="center">
+                        <tr>
+                            <td style="width: 100px; text-align: right;">
+                                <table border="1" bordercolor="#ff9900" width="150" id="TABLE1">
+                                    <tr>
+                                        <td dir="rtl" style="width: 100px; color: white; background-color: #ff9900" valign="top">welcome &nbsp;<asp:Label ID="LabelCostumerName" runat="server"></asp:Label>
+                                            .<br />
+                                            your shopping cart</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100px" align="right" dir="rtl" colspan="">
+                                            <asp:Label ID="LabelBasketStatus" runat="server" Width="124px">your basket is empty</asp:Label></td>
+                                    </tr>
+                                </table>
+                                <asp:Panel ID="PanelCategories" runat="server" Width="150px">
+                                </asp:Panel>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100px; text-align: center" align="right">
+                                <asp:Label ID="ZeroCategories" runat="server" Text="no categories" Visible="False" Font-Names="Bernard MT Condensed"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td align="right" style="width: 100px; text-align: right; height: 65px;" valign="top">
+                                <table width="150">
+                                    <tr>
+                                        <td colspan="2" style="height: 20px">search by name</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100px">
+                                            <asp:ImageButton ID="ImageButtonSearch" runat="server" ImageUrl="~/Images/Design/searchnew[1].gif"
+                                                OnClick="ImageButtonSearch_Click" ToolTip="ητω" /></td>
+                                        <td style="width: 100px" dir="rtl">
+                                            <asp:TextBox ID="TextBoxMedicineName" runat="server" Width="100px" EnableViewState="False"></asp:TextBox></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table align="center" height="50px" visible="False" width="125px">
+                        <asp:Panel ID="PanelAdmin" runat="server" Height="50px" Visible="False" Width="125px">
+                            <tr>
+                                <td align="right" colspan="2" dir="rtl">
+                                    <asp:HyperLink ID="HyperLinkAddMedicine" runat="server" NavigateUrl="~/Catalogue Administration/MedicineEdit.aspx" Width="150px">add medicine</asp:HyperLink></td>
+                            </tr>
+                            <tr>
+                                <td align="right" colspan="2" dir="rtl">
+                                    <asp:HyperLink ID="HyperLinkStock" runat="server" NavigateUrl="~/Stock Management/Stock.aspx" Width="150px">Ordering stock medication has been reduced</asp:HyperLink></td>
+                            </tr>
+                            <tr>
+                                <td align="right" colspan="2" dir="rtl" style="height: 15px">
+                                    <asp:HyperLink ID="HyperLinkStatistics" runat="server" NavigateUrl="~/Catalogue Administration/MedicinesStatistics.aspx"
+                                        Width="150px">produts statistics</asp:HyperLink></td>
+                            </tr>
+                            <tr>
+                                <td align="right" colspan="2" dir="rtl">add new category</td>
+                            </tr>
+                            <tr>
+                                <td align="right" dir="rtl" style="width: 100px">
+                                    <asp:ImageButton ID="ImageButtonAddCategory" runat="server" ImageUrl="~/Images/Design/edit.gif" OnClick="ImageButtonAddCategory_Click" /></td>
+                                <td align="right" dir="rtl" style="width: 100px">
+                                    <asp:TextBox ID="TextBoxNewCategory" runat="server" Width="100px"></asp:TextBox></td>
+                            </tr>
+                        </asp:Panel>
+                    </table>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" height="20" style="background-color: navy; text-align: right" valign="top"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background-color: white; text-align: right" valign="top">
+                    <p align="center" dir="rtl">
+                        Pharmacy Ashdod, KKL 94 Ashdod Phone: 08-601016&nbsp; Emergency Phone: 050-035793&nbsp;
+                       mail <a href="mailto:info@AshdodP.co.il"><span style="color: #0000cc; text-decoration: underline">info@AshdodP.co.il</span></a>&nbsp;
+                    </p>
+                    <p align="center" dir="rtl">
+                        Pharmacist in charge: Tzila Streichman
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
