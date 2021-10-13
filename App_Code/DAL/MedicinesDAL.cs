@@ -51,7 +51,7 @@ public static class MedicinesDAL
     }
     public static DataTable FindMedicines(string findStr)
     {
-        string sql = "SELECT Medicines. * FROM Medicines Where MedicineName Like '%" + findStr + "%'";
+        string sql = "select * from Medicines where Cast(MedicineName AS Nvarchar(max))like N'%" + findStr + "%'";
         return DataAccess.GetDataTable(sql, "Medicines");
     }
     public static DataTable GetEmptyTable()
